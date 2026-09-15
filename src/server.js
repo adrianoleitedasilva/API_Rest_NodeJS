@@ -44,10 +44,10 @@ const server = http.createServer((req, res) => {
       email: "johndoe@example.com",
     });
 
-    return res.end("Criação de usuarios");
+    return res.writeHead(201).end();
   }
 
-  return res.end("Hellooooooooooooo");
+  return res.writeHead(404).end();
 });
 
 server.listen(3333);
